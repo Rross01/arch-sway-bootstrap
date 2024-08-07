@@ -1,9 +1,10 @@
 ---
 - name: Install pacman packages
   become: true
-  package:
+  pacman:
     name: "{{ item }}"
     state: present
+    update_cache: true
   with_items: "{{ pacman_packages }}"
 
 - name: Install yay using makepkg if it isn't installed already

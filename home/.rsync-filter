@@ -1,6 +1,7 @@
 + .config/
 + .config/alacritty/***
 + .config/espanso/***
++ .config/fontconfig/***
 + .config/gtk-3.0/***
 + .config/kanshi/***
 + .config/mako/***
