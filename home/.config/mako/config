@@ -1,3 +1,3 @@
 default-timeout=10000
 width=600
-font=Ubuntu Mono 12
+font=monospace 12

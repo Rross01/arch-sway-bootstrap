@@ -1,0 +1,16 @@
+---
+- name: Ensure destination directory exists
+  file:
+    path: "/home/{{ user }}/.fonts"
+    state: directory
+    owner: "{{ user }}"
+    group: "{{ user }}"
+
+- name: Download fonts
+  loop: "{{ fonts }}"
+  unarchive:
+    src: "{{ item }}"
+    dest: "/home/{{ user }}/.fonts"
+    remote_src: yes
+    owner: "{{ user }}"
+

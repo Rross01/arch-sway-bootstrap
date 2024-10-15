@@ -1,0 +1,25 @@
+---
+- name: Ensure destination directory exists
+  with_items: "{{ bin_archived }}"
+  file:
+    path: "/home/{{ user }}/places/sys/{{ item['name'] }}"
+    state: directory
+    owner: "{{ user }}"
+    group: "{{ user }}"
+
+- name: Download app archive
+  with_items: "{{ bin_archived }}"
+  unarchive:
+    src: "{{ item['url'] }}"
+    dest: "/home/{{ user }}/places/sys/{{ item['name'] }}"
+    remote_src: yes
+    owner: "{{ user }}"
+    group: "{{ user }}"
+
+- name: Create a symbolic link to bin
+  become: true
+  with_items: "{{ bin_archived }}"
+  file:
+    src: "/home/{{ user }}/places/sys/{{ item['name'] }}/{{ item['bin_path'] }}"
+    dest: "/usr/bin/{{ item['name'] }}"
+    state: link

@@ -8,9 +8,9 @@
 + .config/nvim/***
 + .config/ranger/***
 + .config/satty/***
-+ .config/swappy/***
 + .config/sway/***
 + .config/swaylock/***
++ .config/systemd/***
 + .config/tmux/***
 + .config/waybar/***
 + .gitconfig

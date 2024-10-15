@@ -1,0 +1,23 @@
+---
+- name: Install apt packages
+  become: true
+  apt:
+    name: "{{ packages }}"
+
+- name: Install deb packages
+  become: true
+  loop: "{{ single_deb }}"
+  apt:
+    deb: "{{ item }}"
+
+- name: Install snap packages
+  become: true
+  snap:
+    name: "{{ snap_packages['common'] }}"
+
+- name: Install classic snap packages
+  become: true
+  loop: "{{ snap_packages['classic'] }}"
+  snap:
+    name: "{{ item }}"
+    classic: true

@@ -4,9 +4,8 @@
     min-height: 0;
     margin: 0;
     padding: 0;
-	font-family: "Ubuntu Mono";
-	font-size: 14px;
-    font-weight: 500;
+    font-family: "monospace";
+    font-size: 12px;
 }
 
 #waybar {
@@ -15,29 +14,32 @@
 }
 
 #window {
-	color: #d1d5da;
-	font-weight: bold;
+    color: white;
+    font-weight: bold;
 }
 
 #workspaces button {
-    border: 1px solid transparent;
+    border: 1px solid #333333;
     color: #888888;
+    background: #222222;
 }
 
 #workspaces button.focused {
-    border-color: #4c7899;
+    border-color: #4C7899;
     color: white;
-    background-color: #285577;
+    background: #285577;
 }
 
 #workspaces button.urgent {
-    border-color: #c9545d;
-    color: #c9545d;
+    border-color: #2F343A;
+    color: white;
+    background: #900000;
 }
 
 #mode {
-    background: #64727D;
-    border: 1px solid white;
+    background: #900000;
+    border: 1px solid #2F343A;
+    font-weight: 600;
 }
 
 #clock,
@@ -45,7 +47,7 @@
 #tray,
 #mode,
 #language {
-	padding: 0 6px;
+    padding: 0 6px;
 }
 
 #battery.warning {

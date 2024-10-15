@@ -7,11 +7,6 @@ if [ -z "$WAYLAND_DISPLAY" ] && [ "$XDG_VTNR" -eq 1 ]; then
     exec sway
 fi
 
-# Add own binaries to the path
-export PATH=$PATH:$HOME/.bin:$HOME/.scripts
-
-export TERM=screen-256color
-
 # zsh settings
 ZSH_THEME="robbyrussell"
 CASE_SENSITIVE="false"
@@ -26,10 +21,14 @@ plugins=(
 export ZSH="$HOME/places/sys/oh-my-zsh"
 source $ZSH/oh-my-zsh.sh
 
+# Add own binaries to the path
+export PATH=$PATH:$HOME/.bin:$HOME/.scripts
+
+export TERM=xterm-256color
+
 # Sources
-source <(helmfile completion zsh)
+source <(helm completion zsh)
 source <(kubectl completion zsh)
-source <(k3d completion zsh)
 
 # ssh-agent
 export SSH_AUTH_SOCK=/run/user/1000/ssh-agent.socket
@@ -58,12 +57,10 @@ wait_for_status_code() {
 alias s='ssh'
 alias v='nvim'
 alias vim='nvim'
-alias gb='git branch'
 alias git_clean='git checkout master && git pull && git branch | grep -v master | xargs git branch -D $argv'
-alias glog='git log --all --decorate --oneline --graph $argv'
+alias git_log='git log --all --decorate --oneline --graph $argv'
 alias kl='kubectl'
 alias x='ranger'
-alias arch_clean_packages='sudo pacman -Qdtq | sudo pacman -Rns -'
 
 # kubeconfs
 alias locconf='export KUBECONFIG=~/places/personal/kubeconfigs/loc.conf'

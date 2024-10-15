@@ -1,7 +1,7 @@
 # Common
 set {
     $mod Mod4
-    $font "Ubuntu 10"
+    $font "monospace 10"
     $left h
     $down j
     $up k
@@ -32,13 +32,12 @@ for_window {
     [app_id="pyTimeSched"] resize set width 40 ppt height 30 ppt
     [app_id="com.gabm.satty"] floating enable
     [app_id="com.gabm.satty"] resize set width 70 ppt height 70 ppt
-    [app_id="desktopclient.owncloud.com.owncloud"] floating enable
 }
 
 assign {
     [app_id="firefox"] workspace 1
     [app_id="Alacritty"] workspace 2
-    [app_id="org.telegram.desktop"] workspace 3
+    [app_id="telegram-desktop_telegram-desktop"] workspace 3
     [app_id="org.keepassxc.KeePassXC"] workspace 3
     [instance="jetbrains-pycharm-ce"] workspace 4
     [instance="obsidian"] workspace 9
@@ -67,7 +66,6 @@ exec {
     firefox
     keepassxc
     obsidian
-    owncloud
     telegram-desktop
     udiskie --smart-tray --notify
     wl-paste --watch cliphist store

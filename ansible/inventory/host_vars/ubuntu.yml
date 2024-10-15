@@ -1,0 +1,118 @@
+---
+user: rrossamakhin
+my_groups: 
+  - sudo
+  - video # for brightnessctl
+  - input # for brightnessctl
+user_systemd_enabled: [ssh-agent.service]
+system_systemd_enabled: [bluetooth.service]
+
+packages:
+  # sway
+  - sway
+  - swayidle
+  - swaylock
+
+  # wm stuff
+  - brightnessctl
+  - cliphist
+  - fuzzel
+  - imagemagick
+  - kanshi
+  - mako-notifier
+  - mpv
+  - udiskie
+  - waybar
+
+  # screenshots
+  - grim
+  - slurp
+
+  # apps
+  - alacritty
+  - gnome-calculator
+  - keepassxc
+  - libreoffice
+  - obs-studio
+  # - obsidian
+  # - pycharm-community-edition
+  - qbittorrent
+  - wireshark
+
+  # theming
+  - materia-gtk-theme
+  - papirus-icon-theme
+
+  # audio
+  - pavucontrol
+  - pipewire
+  - pipewire-alsa
+  - pipewire-audio
+  - playerctl
+
+  # some deps
+  - npm # nvim plugins dep
+  - python3-psutil # ansible gsettings module
+  - xdg-desktop-portal-wlr
+  - xwayland
+  - dconf-cli
+  - ripgrep # neovim fuzzy search
+  - sshpass # ansible
+
+  # dev
+  - ansible
+  - awscli
+  - ruff
+
+  # podman
+  - podman
+  - podman-compose
+  - podman-docker
+
+  # network and bluetooth
+  - blueman
+  - bluetooth
+  - network-manager-openconnect
+
+  # common cli tools
+  - htop
+  - jq
+  - ldap-utils
+  - p7zip
+  - rsync
+  - tcpdump
+  - unzip
+  - zip
+
+  # extra cli tools
+  - git
+  - ranger
+  - tldr
+  - tmux
+  - zsh
+
+snap_packages:
+  common:
+  - firefox
+  - helmfile-snap
+  - k9s
+  - telegram-desktop
+  classic:
+  - helm
+  - kubectl
+  - pycharm-community
+
+single_deb:
+  - https://st.ktalk.host/ktalk-app/linux/ktalk2.12.0amd64.deb
+  - https://products.s.kaspersky-labs.com/endpoints/keslinux10/12.1.0.1297/multilanguage-12.1.0.1297/3837323739337c44454c7c31/kesl_12.1.0-1297_amd64.deb
+
+fonts:
+  - https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/JetBrainsMono.zip
+
+bin_archived:
+  - url: https://github.com/gabm/Satty/releases/download/v0.14.0/satty-x86_64-unknown-linux-gnu.tar.gz
+    name: satty
+    bin_path: satty
+  - url: https://github.com/neovim/neovim/releases/download/v0.10.2/nvim-linux64.tar.gz
+    name: nvim
+    bin_path: nvim-linux64/bin/nvim
