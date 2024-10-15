@@ -1,8 +1,0 @@
----
-- name: Setup zram
-  become: true
-  ansible.builtin.copy:
-    dest: /etc/systemd/zram-generator.conf
-    content: |
-      [zram0]
-      zram-size = ram

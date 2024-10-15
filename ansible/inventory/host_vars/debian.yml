@@ -1,0 +1,116 @@
+---
+user: "rrossamakhin"
+# my_groups: [docker, lp]
+my_groups: [sudo]
+user_systemd_enabled: [ssh-agent.service]
+system_systemd_enabled: [bluetooth.service]
+
+packages:
+  # sway
+  - sway
+  - swayidle
+  - swaylock
+
+  # wm stuff
+  - brightnessctl
+  - cliphist
+  - fuzzel
+  - imagemagick
+  - kanshi
+  - mako-notifier
+  - mpv
+  # - nm-connection-editor # точно нужен?
+  - udiskie
+  - waybar
+
+  # screenshots
+  - grim
+  # - satty # заменить
+  - slurp
+
+  # apps
+  - alacritty
+  - gnome-calculator
+  - keepassxc
+  - libreoffice
+  - obs-studio
+  # - obsidian
+  # - pycharm-community-edition
+  - qbittorrent
+  - wireshark
+
+  # theming
+  - materia-gtk-theme
+  - papirus-icon-theme
+  # - ttf-jetbrains-mono-nerd
+  - fonts-ubuntu
+  - fonts-ubuntu-console
+
+  # audio
+  - pavucontrol
+  - pipewire
+  - pipewire-alsa
+  - pipewire-audio
+  - playerctl
+  # - sof-firmware # audio drivers
+
+  # some deps
+  - npm # nvim plugins dep
+  # - python-netaddr # ansible dep
+  - python3-psutil # ansible gsettings module
+  # - python-requests # ansible dep
+  # - qt5-wayland
+  # - qt6-wayland
+  - xdg-desktop-portal-wlr
+  # - xorg-xrandr # for minecraft
+  - xwayland
+  - dconf-cli
+
+  # dev
+  - ansible
+  - awscli
+  - ruff
+  # - stylua
+
+  # podman
+  - podman
+  - podman-compose
+  - podman-docker
+
+  # network and bluetooth
+  - blueman
+  - bluetooth
+  - network-manager-openconnect
+
+  # common cli tools
+  - htop
+  - ldap-utils
+  - p7zip
+  - rsync
+  - sshpass
+  - tcpdump
+  - unzip
+  - jq
+  - zip
+
+  # extra cli tools
+  - git
+  - ranger
+  - ripgrep
+  - tldr
+  - tmux
+  - zsh
+
+snap_packages:
+  common:
+  - k9s
+  - helmfile-snap
+  - firefox
+  - telegram-desktop
+  classic:
+  - nvim
+  - helm
+  - kubectl
+
+fonts_custom:
+  - https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/JetBrainsMono.zip

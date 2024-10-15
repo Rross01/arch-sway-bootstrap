@@ -1,7 +1,7 @@
 ---
-- hosts: arch
+- hosts: ubuntu
   gather_facts: false
   tasks:
     - name: Include role
       import_role:
-        name: arch-sway-bootstrap
+        name: ubuntu-sway-bootstrap
